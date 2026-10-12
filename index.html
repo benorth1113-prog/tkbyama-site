@@ -20,18 +20,31 @@
   footer { text-align: center; margin-top: 3em; color: #ffa94d; }
   .video { position: relative; padding-top: 56.25%; margin-bottom: 2em; }
   .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* Language toggle */
+  html[lang="en"] .ja { display: none; }
+  html[lang="ja"] .en { display: none; }
+  .lang { text-align: right; margin-bottom: 1em; }
+  .lang button { font: inherit; color: #ffa94d; background: none; border: 0; padding: 0 4px; cursor: pointer; opacity: 0.5; }
+  .lang button[aria-pressed="true"] { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
 </style>
 </head>
 <body>
+<div class="lang">
+  <button type="button" data-lang="en">EN</button> /
+  <button type="button" data-lang="ja">JP</button>
+</div>
+
 <div class="video">
   <iframe src="https://player.vimeo.com/video/1184994465?title=0&byline=0&portrait=0"
     allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
     title="Taiki Ben Kitayama - Demo Reel"></iframe>
 </div>
-<h1>Taiki Ben Kitayama</h1>
+<h1><span class="en">Taiki Ben Kitayama</span><span class="ja">Bやま</span></h1>
 <p>3D Animator</p>
 
-<p>Hello there! I'm a character animator and layout artist. I also teach 3D CG as an instructor and mentor students who aspire to become 3D animators in the Japanese animation industry. I enjoy being part of a good story in any form.</p>
+<p class="en">Hello there! I'm a character animator and layout artist. I also teach 3D CG as an instructor and mentor students who aspire to become 3D animators in the Japanese animation industry. I enjoy being part of a good story in any form.</p>
+<p class="ja">はじめまして、Bやまと申します。長年アニメーター/レイアウトとして映像業界で働いてきました。日本のアニメ業界で、3Dアニメーターとして就職を目指す学生の支援もしています。どんな形であれど、良い物語の一部になることが私の喜びです。</p>
 
 <h2>CV</h2>
 <div class="wrap">
@@ -40,16 +53,46 @@
     <tr><th>YEAR</th><th>TITLE</th><th>ROLE</th><th>STUDIO</th></tr>
   </thead>
   <tbody>
-    <tr><td class="year">2026</td><td>Untitled Feature Film</td><td>Character Animator</td><td><a href="https://olm.co.jp/" target="_blank" rel="noopener">OLM Digital</a></td></tr>
-    <tr><td class="year">2025</td><td>Saikyo-o Zukan (TV Anime)</td><td>Layout Artist</td><td><a href="https://olm.co.jp/" target="_blank" rel="noopener">OLM Digital</a></td></tr>
-    <tr><td class="year">2024</td><td>Onmyoji Re:birth (TV Anime)</td><td>Animator / Layout Artist</td><td><a href="https://cafegroup.net/celavie/" target="_blank" rel="noopener">AnimationCafe, CELAVIE</a></td></tr>
-    <tr><td class="year">2024</td><td>Mashin Hero Wataru (TV Anime)</td><td>Animator / Layout Artist</td><td><a href="https://cafegroup.net/celavie/" target="_blank" rel="noopener">AnimationCafe, CELAVIE</a></td></tr>
-    <tr><td class="year">2023</td><td>Hot Wheels Let's Race (Netflix)</td><td>Character Animator</td><td><a href="https://olm.co.jp/" target="_blank" rel="noopener">OLM Digital</a></td></tr>
-    <tr><td class="year">2023</td><td>THE IDOLM@STER MILLION LIVE! (TV Anime)</td><td>Animator / Layout Artist</td><td><a href="https://shirogumi.com/" target="_blank" rel="noopener">Shirogumi</a></td></tr>
-    <tr><td class="year">2021</td><td>Night Head 2041 (TV Anime)</td><td>Animator / Layout Artist</td><td><a href="https://shirogumi.com/" target="_blank" rel="noopener">Shirogumi</a></td></tr>
-    <tr><td class="year">2020</td><td>Universal Studios Jp, Attraction</td><td>Animator / Layout Artist</td><td><a href="https://shirogumi.com/" target="_blank" rel="noopener">Shirogumi</a></td></tr>
-    <tr><td class="year">2019</td><td>Tsubasa Plus (Promotional Video)</td><td>Animator / Layout Artist</td><td><a href="https://shirogumi.com/" target="_blank" rel="noopener">Shirogumi</a></td></tr>
-    <tr><td class="year">2018</td><td>Revisions (Netflix)</td><td>Animator / Layout Artist</td><td><a href="https://shirogumi.com/" target="_blank" rel="noopener">Shirogumi</a></td></tr>
+    <tr><td class="year">2026</td>
+      <td><span class="en">Untitled Feature Film</span><span class="ja">未発表長編映画</span></td>
+      <td>Character Animator</td>
+      <td><a href="https://olm.co.jp/" target="_blank" rel="noopener"><span class="en">OLM Digital</span><span class="ja">株式会社オー・エル・エム・デジタル</span></a></td></tr>
+    <tr><td class="year">2025</td>
+      <td><span class="en">Saikyo-o Zukan (TV Anime)</span><span class="ja">最強王図鑑 ~The Ultimate Tournament~（TVアニメ）</span></td>
+      <td>Layout Artist</td>
+      <td><a href="https://olm.co.jp/" target="_blank" rel="noopener"><span class="en">OLM Digital</span><span class="ja">株式会社オー・エル・エム・デジタル</span></a></td></tr>
+    <tr><td class="year">2024</td>
+      <td><span class="en">Onmyoji Re:birth (TV Anime)</span><span class="ja">Onmyoji Re:birth（TVアニメ）</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://cafegroup.net/celavie/" target="_blank" rel="noopener"><span class="en">AnimationCafe, CELAVIE</span><span class="ja">株式会社アニメーションカフェ CELAVIE</span></a></td></tr>
+    <tr><td class="year">2024</td>
+      <td><span class="en">Mashin Hero Wataru (TV Anime)</span><span class="ja">魔神創造伝ワタル（TVアニメ）</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://cafegroup.net/celavie/" target="_blank" rel="noopener"><span class="en">AnimationCafe, CELAVIE</span><span class="ja">株式会社アニメーションカフェ CELAVIE</span></a></td></tr>
+    <tr><td class="year">2023</td>
+      <td><span class="en">Hot Wheels Let's Race (Netflix)</span><span class="ja">Hot Wheels Let's Race（Netflix）</span></td>
+      <td>Character Animator</td>
+      <td><a href="https://olm.co.jp/" target="_blank" rel="noopener"><span class="en">OLM Digital</span><span class="ja">株式会社オー・エル・エム・デジタル</span></a></td></tr>
+    <tr><td class="year">2023</td>
+      <td><span class="en">THE IDOLM@STER MILLION LIVE! (TV Anime)</span><span class="ja">アイドルマスター ミリオンライブ！（TVアニメ）</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://shirogumi.com/" target="_blank" rel="noopener"><span class="en">Shirogumi</span><span class="ja">株式会社白組</span></a></td></tr>
+    <tr><td class="year">2021</td>
+      <td><span class="en">NIGHT HEAD 2041 (TV Anime)</span><span class="ja">NIGHT HEAD 2041（TVアニメ）</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://shirogumi.com/" target="_blank" rel="noopener"><span class="en">Shirogumi</span><span class="ja">株式会社白組</span></a></td></tr>
+    <tr><td class="year">2020</td>
+      <td><span class="en">Universal Studios Jp, Attraction</span><span class="ja">ユニバーサル・スタジオ・ジャパン アトラクション</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://shirogumi.com/" target="_blank" rel="noopener"><span class="en">Shirogumi</span><span class="ja">株式会社白組</span></a></td></tr>
+    <tr><td class="year">2019</td>
+      <td><span class="en">TSUBASA+ (Promotional Video)</span><span class="ja">TSUBASA+（プロモーション映像）</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://shirogumi.com/" target="_blank" rel="noopener"><span class="en">Shirogumi</span><span class="ja">株式会社白組</span></a></td></tr>
+    <tr><td class="year">2018</td>
+      <td><span class="en">Revisions (Netflix)</span><span class="ja">revisions リヴィジョンズ（Netflix）</span></td>
+      <td>Animator / Layout Artist</td>
+      <td><a href="https://shirogumi.com/" target="_blank" rel="noopener"><span class="en">Shirogumi</span><span class="ja">株式会社白組</span></a></td></tr>
   </tbody>
 </table>
 </div>
@@ -61,32 +104,46 @@
     <tr><th>YEAR</th><th>TITLE</th><th>TYPE</th><th>STATUS</th></tr>
   </thead>
   <tbody>
-    <tr><td class="year">2027</td><td>GIFerence</td><td>Website</td><td>WIP</td></tr>
-    <tr><td class="year">2027</td><td>A Dog Wakes Up</td><td>3D Animation</td><td>Prep</td></tr>
-    <tr><td class="year">2026</td><td>Chicken or Egg</td><td>2D Animation</td><td>Prep</td></tr>
-    <tr><td class="year">2026</td><td>The Claws</td><td>3D Animation</td><td>WIP</td></tr>
-    <tr><td class="year">2026</td><td>She's Evil</td><td>3D Animation</td><td>WIP</td></tr>
-    <tr><td class="year">2026</td><td>Pull Over</td><td>3D Animation</td><td>WIP</td></tr>
+    <tr><td class="year">2027</td><td>GIFerence</td>
+      <td>Website</td>
+      <td>WIP</td></tr>
+    <tr><td class="year">2027</td><td>A Dog Wakes Up</td>
+      <td>3D Animation</td>
+      <td>Prep</td></tr>
+    <tr><td class="year">2026</td><td>Chicken or Egg</td>
+      <td>2D Animation</td>
+      <td>Prep</td></tr>
+    <tr><td class="year">2026</td><td>The Claws</td>
+      <td>3D Animation</td>
+      <td>WIP</td></tr>
+    <tr><td class="year">2026</td><td>She's Evil</td>
+      <td>3D Animation</td>
+      <td>WIP</td></tr>
+    <tr><td class="year">2026</td><td>Pull Over</td>
+      <td>3D Animation</td>
+      <td>WIP</td></tr>
   </tbody>
 </table>
 </div>
 
 <h2>Student Placements</h2>
-<p>Studios where my students were hired.</p>
+<p><span class="en">Studios where my students were hired.</span><span class="ja">教え子の就職先です。</span></p>
 <div class="wrap">
 <table>
   <thead>
     <tr><th>STUDIO</th><th>HIRED</th></tr>
   </thead>
   <tbody>
-    <tr><td><a href="https://www.shirogumi.com/" target="_blank" rel="noopener">Shirogumi</a></td><td>1</td></tr>
-    <tr><td><a href="https://www.sublimation.co.jp/" target="_blank" rel="noopener">Sublimation</a></td><td>1</td></tr>
-    <tr><td><a href="https://www.twinengine.jp/" target="_blank" rel="noopener">Studio Chromato</a></td><td>1</td></tr>
+    <tr><td><a href="https://www.shirogumi.com/" target="_blank" rel="noopener"><span class="en">Shirogumi</span><span class="ja">株式会社白組</span></a></td><td>1</td></tr>
+    <tr><td><a href="https://www.sublimation.co.jp/" target="_blank" rel="noopener"><span class="en">Sublimation</span><span class="ja">株式会社サブリメイション</span></a></td><td>1</td></tr>
+    <tr><td><a href="https://www.twinengine.jp/" target="_blank" rel="noopener"><span class="en">Studio Chromato</span><span class="ja">株式会社スタジオクロマト</span></a></td><td>1</td></tr>
   </tbody>
 </table>
 </div>
-<p>Other offers: MAPPA, Toei Animation, SEGA, Bandai Namco Filmworks, and more.<br>
+<p class="en">Other offers: MAPPA, Toei Animation, SEGA, Bandai Namco Filmworks, and more.<br>
 Interested in mentorship? Feel free to contact me.</p>
+<p class="ja">その他の内定先：株式会社MAPPA、東映アニメーション株式会社、株式会社セガ、株式会社バンダイナムコフィルムワークス ほか<br>
+メンターシップに興味のある方は、お気軽にご連絡ください。</p>
 
 <p class="gap">
 <a href="https://www.linkedin.com/in/taiki-kitayama-b504041b4">LinkedIn</a> /
@@ -95,6 +152,28 @@ Interested in mentorship? Feel free to contact me.</p>
 </p>
 
 <footer>Taiki Kitayama, 2026</footer>
+
+<script>
+  (function () {
+    var KEY = "lang";
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      var buttons = document.querySelectorAll(".lang button");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute("aria-pressed", buttons[i].dataset.lang === lang ? "true" : "false");
+      }
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    var initial = saved || ((navigator.language || "").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+    setLang(initial);
+    var buttons = document.querySelectorAll(".lang button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function () { setLang(this.dataset.lang); });
+    }
+  })();
+</script>
 
 </body>
 </html>
