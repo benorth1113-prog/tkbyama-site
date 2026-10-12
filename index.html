@@ -24,8 +24,8 @@
   /* Language toggle */
   html[lang="en"] .ja { display: none; }
   html[lang="ja"] .en { display: none; }
-  .lang { text-align: right; margin-bottom: 1em; }
-  .lang button { font: inherit; color: #ffa94d; background: none; border: 0; padding: 0 4px; cursor: pointer; opacity: 0.5; }
+  .lang { position: sticky; top: 0; z-index: 10; text-align: right; font-size: 18px; padding: 8px 0; margin-bottom: 0.5em; background: #0b1a3a; }
+  .lang button { font: inherit; color: #ffa94d; background: none; border: 0; padding: 4px 6px; cursor: pointer; opacity: 0.5; }
   .lang button[aria-pressed="true"] { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
 </style>
 </head>
