@@ -18,6 +18,7 @@
   td.year { white-space: nowrap; }
   .gap { margin-top: 2em; }
   footer { text-align: center; margin-top: 3em; color: #ffa94d; }
+  table.aligned { table-layout: fixed; min-width: 760px; }
   tr.cancelled td, tr.cancelled a { color: #6b7591; }
   .video { position: relative; padding-top: 56.25%; margin-bottom: 2em; }
   .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -49,7 +50,8 @@
 
 <h2>CV</h2>
 <div class="wrap">
-<table>
+<table class="aligned">
+  <colgroup><col style="width:7%"><col style="width:43%"><col style="width:27%"><col style="width:23%"></colgroup>
   <thead>
     <tr><th>YEAR</th><th>TITLE</th><th>ROLE</th><th>STUDIO</th></tr>
   </thead>
@@ -100,17 +102,18 @@
 
 <h2>Personal Projects</h2>
 <div class="wrap">
-<table>
+<table class="aligned">
+  <colgroup><col style="width:7%"><col style="width:43%"><col style="width:19%"><col style="width:11%"><col style="width:20%"></colgroup>
   <thead>
     <tr><th>YEAR</th><th>TITLE</th><th>TYPE</th><th>STATUS</th><th>COMMENT</th></tr>
   </thead>
   <tbody>
     <tr><td class="year">2026</td><td><a href="https://chromewebstore.google.com/detail/global-media-keys/jdddldohhhmcolajjmipcfkgoeplpjfk" target="_blank" rel="noopener">Global Media Keys</a></td>
-      <td>Google Extension</td>
+      <td>Chrome Extension</td>
       <td>Released</td>
       <td></td></tr>
     <tr><td class="year">2026</td><td><a href="https://chromewebstore.google.com/detail/discord-forum-poster/hmnnlodkhkkoffpjhdgjomiklanbhcmg" target="_blank" rel="noopener">Discord Forum Poster</a></td>
-      <td>Google Extension</td>
+      <td>Chrome Extension</td>
       <td>Released</td>
       <td></td></tr>
     <tr><td class="year">2026</td><td>The Claws</td>
@@ -136,7 +139,7 @@
     <tr class="cancelled"><td class="year">2027</td><td>GIFerence</td>
       <td>Website</td>
       <td>Cancelled</td>
-      <td>Scrapped it, made Forum Poster instead.</td></tr>
+      <td>Made Forum Poster instead.</td></tr>
   </tbody>
 </table>
 </div>
